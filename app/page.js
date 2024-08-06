@@ -42,10 +42,6 @@ export default function Home() {
       }else{
         await setDoc(docRef, {quant: quant - 1})
       }
-      if (typeof quant !== 'number') {
-        console.error('Invalid quant value:', quant);
-        return;
-      }
     }
     await updateInventory()
   }
